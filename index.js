@@ -959,7 +959,7 @@ function FlpParser(options) {
   Writable.call(this, options);
 
   this.state = STATE_START;
-  this.buffer = new Buffer(0);
+  this.buffer = Buffer.alloc(0);
   this.cursor = 0;
   this.debug = !!options.debug;
   this.curChannel = -1;
